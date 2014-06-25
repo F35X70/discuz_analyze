@@ -24,7 +24,7 @@ if __name__ == '__main__':
 						feedback_comment_stat_detail[x] = []
 						feedback_comment_stat_detail[x].append(i[0])
 	for i in feedback_comment_stat_detail:
-		i = list(set(i))
+		feedback_comment_stat_detail[i] = list(set(feedback_comment_stat_detail[i]))
 
 	#output
 	feedback_comment_stat_sort =  sorted(feedback_comment_stat.iteritems(), key=lambda d:d[1], reverse = True)
