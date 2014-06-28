@@ -77,9 +77,15 @@ if __name__ == '__main__':
 	for i in feedback_id:
 		feedback_item = {"id":0,"fid":0,"typeid":0}
 		feedback_item["id"] = i
-		if i in feedback_tag_stat_detail["开发者问答"] :
-			print i 
-		
+		if i in feedback_tag_stat_detail["Firefox OS"]:
+			for x in file_content: 
+				if i == x[0]:
+					#print x[1].decode("utf-8")
+					for z in x[-1]:
+						if z != "Firefox OS":
+							print z.decode("utf-8"),
+					print ""
+			
 	"""	
 	print "step4"
 
